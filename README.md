@@ -1,0 +1,1 @@
+# cabinmate-cabin-layouts
