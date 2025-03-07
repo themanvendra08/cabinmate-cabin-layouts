@@ -1,0 +1,273 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Multiple File Upload</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background-color: #fcfcfc;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+            width: 600px;
+            background-color: #ffffff;
+            padding: 20px 30px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .drop_box {
+            margin: 10px 0;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 3px dotted #a3a3a3;
+            border-radius: 5px;
+        }
+
+        .drop_box h4 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #2e2e2e;
+        }
+
+        .drop_box p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #a3a3a3;
+        }
+
+        .btn {
+            text-decoration: none;
+            background-color: #32755c;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #32755c;
+            border: 1px solid #32755c;
+        }
+
+        .form input {
+            margin: 10px 0;
+            width: 100%;
+            background-color: #e2e2e2;
+            border: none;
+            outline: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+        }
+
+        .file-list {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .file-list li {
+            margin: 5px 0;
+            list-style-type: square;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .remove-btn {
+            background-color: #32755c;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            /* border-radius: 4px; */
+        }
+
+        .remove-btn:hover {
+            background-color: #32755c;
+        }
+
+        .submit {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h3>Upload Files</h3>
+            <div class="drop_box">
+                <header>
+                    <h4>Select Files here</h4>
+                </header>
+                <p>Files Supported: JPG, JPEG, PNG, PDF, TEXT, DOC, DOCX</p>
+                <input type="file" multiple="" accept=".jpg,.jpeg,.png,.doc,.docx,.pdf,.txt" id="fileInput" hidden="">
+                <button class="btn" id="chooseFilesBtn">
+                    Choose Files
+                </button>
+            </div>
+            <ul class="file-list" id="fileList"></ul>
+            <button class="btn submit" id="submitBtn">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const chooseFilesBtn = document.getElementById('chooseFilesBtn')
+        const fileInput = document.getElementById('fileInput')
+        const fileList = document.getElementById('fileList')
+        const submitBtn = document.getElementById('submitBtn')
+        const MAX_TOTAL_SIZE = 10 * 1024 * 1024 // 10MB
+
+        const purposeFieldValue = parent.GetFieldValue('post_type000F1')
+        console.log('purposeFieldValue: ', purposeFieldValue)
+        const preparationDetailsFieldValue = parent.GetFieldValue(
+            'preparation_details000F1'
+        )
+        console.log('preparationDetailsFieldValue: ', preparationDetailsFieldValue)
+        const titleFieldValue = parent.GetFieldValue('title000F1')
+        console.log('titleFieldValue: ', titleFieldValue)
+        const descriptionFieldValue = parent.GetFieldValue('description000F1')
+        console.log('descriptionFieldValue: ', descriptionFieldValue)
+
+        if (
+            !purposeFieldValue ||
+            !titleFieldValue ||
+            !descriptionFieldValue
+        ) {
+            alert('Please fill all the fields')
+            parent.$('button.btn-close---').click()
+        }
+
+        if (purposeFieldValue && purposeFieldValue === 'Preparations') {
+            if (!preparationDetailsFieldValue) {
+                alert('Please fill all the fields')
+                parent.$('button.btn-close---').click()
+            }
+        }
+
+        let isConfigUpdate = false
+        let uploadItems = []
+
+        chooseFilesBtn.addEventListener('click', () => {
+            fileInput.click()
+        })
+
+        fileInput.addEventListener('change', () => {
+            const newFiles = Array.from(fileInput.files)
+            const validExtensions = ['jpg', 'jpeg', 'png', 'pdf', 'txt', 'doc', 'docx']
+            const invalidFiles = newFiles.filter(file => !validExtensions.includes(file.name.split('.').pop().toLowerCase()))
+            const totalSize = [...uploadItems, ...newFiles].reduce((acc, file) => acc + file.size, 0)
+
+            if (invalidFiles.length > 0) {
+                alert('Some files have invalid extensions. Please upload files with extensions: JPG, JPEG, PNG, PDF, TEXT, DOC, DOCX.')
+                fileInput.value = '' // Clear the input
+                return
+            }
+
+            if (totalSize > MAX_TOTAL_SIZE) {
+                alert('Total file size exceeds 10MB. Please upload files with a total size of 10MB or less.')
+                fileInput.value = '' // Clear the input
+                return
+            }
+
+            uploadItems = [...uploadItems, ...newFiles]
+            updateFileList(uploadItems)
+        })
+
+        function updateFileList(files) {
+            fileList.innerHTML = ''
+            files.forEach((file, index) => {
+                const listItem = document.createElement('li')
+                listItem.textContent = file.name
+
+                const removeBtn = document.createElement('button')
+                removeBtn.textContent = 'x'
+                removeBtn.classList.add('remove-btn')
+                removeBtn.addEventListener('click', () => {
+                    files.splice(index, 1)
+                    updateFileList(files)
+                })
+
+                listItem.appendChild(removeBtn)
+                fileList.appendChild(listItem)
+            })
+            fileInput.files = new FileListItems(files)
+        }
+
+        function FileListItems(files) {
+            const b = new ClipboardEvent("").clipboardData || new DataTransfer()
+            files.forEach(file => b.items.add(file))
+            return b.files
+        }
+
+        async function handleFileUpload() {
+            submitBtn.textContent = 'Uploading...'
+            const formData = new FormData()
+            formData.append('purpose', purposeFieldValue)
+            formData.append(
+                'preparationDetails',
+                preparationDetailsFieldValue,
+            )
+            formData.append('title', titleFieldValue)
+            formData.append('description', descriptionFieldValue)
+            const files = fileInput.files
+            for (let i = 0; i < files.length; i++) {
+                formData.append('files', files[i])
+            }
+            console.log('formData: ', formData)
+            await fetch('https://dev-cmapi.zysk.in/api/community/posts', {
+                method: 'POST',
+                body: formData,
+            })
+                .then((response) => response.json())
+                .then(async (data) => {
+                    console.log('data: ', data)
+                    if (data.statusCode === 201) {
+                        submitBtn.textContent = 'Submit'
+                        window.location.href =
+                            '../../aspx/iview.aspx?ivname=cmntylst'
+                    } else {
+                        submitBtn.textContent = 'Submit'
+                        alert('Failed to upload files')
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error uploading files:', error)
+                    alert('Error uploading files')
+                    submitBtn.textContent = 'Submit'
+                })
+        }
+
+        submitBtn.addEventListener('click', handleFileUpload)
+    </script>
+</body>
+
+</html>

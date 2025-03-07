@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kondapur Layout</title>
+    <link
+      rel="stylesheet"
+      href="https://cabinmate-axpert-api.s3.ap-south-1.amazonaws.com/html-files/CSS/layout.css"
+    />
+  </head>
+
+  <body>
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loading-spinner"></div>
+    </div>
+    <div>
+      <div
+        style="position: relative; margin: 40px; width: 1250px; height: 900px"
+      >
+        <div
+          style="
+            position: absolute;
+            left: 5rem;
+            width: 120rem;
+            height: 74rem;
+            top: 3rem;
+            border: 1rem solid #e0e0e0;
+            box-sizing: border-box;
+            border-bottom: 1rem solid #e0e0e0;
+          "
+        >
+          <!-- <div style="height: 27rem; width: 55rem;left: 7rem; border-left: 0.5rem solid #E0E0E0; border-right: 0.5rem solid #E0E0E0; border-top: 0.5rem solid #E0E0E0; border-bottom: 0.5rem solid #E0E0E0; position: absolute;  top: 8rem"> -->
+          <div
+            style="
+              height: 32rem;
+              width: 38rem;
+              border-left: 0rem solid #e0e0e0;
+              border-right: 0.5rem solid #e0e0e0;
+              border-top: 0rem solid #e0e0e0;
+              border-bottom: 0.5rem solid #e0e0e0;
+              position: absolute;
+              left: 0rem;
+              top: 0rem;
+            "
+          >
+            <p
+              style="
+                position: absolute;
+                left: 17rem;
+                top: 19rem;
+                font-size: small;
+                font-weight: bold;
+                writing-mode: vertical-rl;
+                rotate: 270deg;
+              "
+            >
+              Non AC Cabin
+            </p>
+
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 0rem;
+                left: 0rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="22">22</div>
+              <div class="horizontalSeat Non-AC booked" id="104">N/A</div>
+              <div class="horizontalSeat Non-AC" id="105">105</div>
+              <div class="horizontalSeat Non-AC" id="106">106</div>
+              <div class="horizontalSeat Non-AC" id="107">107</div>
+              <div class="horizontalSeat Non-AC" id="108">108</div>
+              <div class="horizontalSeat Non-AC" id="109">109</div>
+              <div class="horizontalSeat Non-AC" id="110">110</div>
+              <div class="horizontalSeat Non-AC" id="111">111</div>
+              <div class="horizontalSeat Non-AC" id="112">112</div>
+              <div class="horizontalSeat Non-AC" id="113">113</div>
+              <div class="horizontalSeat Non-AC" id="114">114</div>
+              <div class="horizontalSeat Non-AC" id="115">115</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                bottom: 0rem;
+                left: 0rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="9">9</div>
+              <div class="horizontalSeat Non-AC" id="8">8</div>
+              <div class="horizontalSeat Non-AC" id="7">7</div>
+              <div class="horizontalSeat Non-AC" id="6">6</div>
+              <div class="horizontalSeat Non-AC" id="5">5</div>
+              <div class="horizontalSeat Non-AC" id="4">4</div>
+              <div class="horizontalSeat Non-AC" id="3">3</div>
+              <div class="horizontalSeat Non-AC" id="2">2</div>
+              <div class="horizontalSeat Non-AC" id="1">1</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 2rem;
+                left: 0rem;
+                gap: 0.8rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="21">21</div>
+              <div class="horizontalSeat Non-AC" id="20">20</div>
+              <div class="horizontalSeat Non-AC" id="19">19</div>
+              <div class="horizontalSeat Non-AC" id="18">18</div>
+              <div class="horizontalSeat Non-AC" id="17">17</div>
+              <div class="horizontalSeat Non-AC" id="16">16</div>
+              <div class="horizontalSeat Non-AC" id="15">15</div>
+              <div class="horizontalSeat Non-AC" id="14">14</div>
+              <div class="horizontalSeat Non-AC" id="13">13</div>
+              <div class="horizontalSeat Non-AC" id="12">12</div>
+              <div class="horizontalSeat Non-AC" id="11">11</div>
+              <div class="horizontalSeat Non-AC" id="10">10</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 4rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="103">103</div>
+              <div class="horizontalSeat Non-AC" id="102">102</div>
+              <div class="horizontalSeat Non-AC" id="101">101</div>
+              <div class="horizontalSeat Non-AC" id="100">100</div>
+              <div class="horizontalSeat Non-AC" id="99">99</div>
+              <div class="horizontalSeat Non-AC" id="98">98</div>
+              <div class="horizontalSeat Non-AC" id="97">97</div>
+              <div class="horizontalSeat Non-AC" id="96">96</div>
+              <div class="horizontalSeat Non-AC" id="95">95</div>
+              <div class="horizontalSeat Non-AC" id="94">94</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 6.5rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="83">83</div>
+              <div class="horizontalSeat Non-AC" id="84">84</div>
+              <div class="horizontalSeat Non-AC" id="85">85</div>
+              <div class="horizontalSeat Non-AC" id="86">86</div>
+              <div class="horizontalSeat Non-AC" id="87">87</div>
+              <div class="horizontalSeat Non-AC" id="88">88</div>
+              <div class="horizontalSeat Non-AC" id="89">89</div>
+              <div class="horizontalSeat Non-AC" id="90">90</div>
+              <div class="horizontalSeat Non-AC" id="91">91</div>
+              <div class="horizontalSeat Non-AC" id="92">92</div>
+              <div class="horizontalSeat Non-AC" id="93">93</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 10rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="82">82</div>
+              <div class="horizontalSeat Non-AC" id="81">81</div>
+              <div class="horizontalSeat Non-AC" id="80">80</div>
+              <div class="horizontalSeat Non-AC" id="79">79</div>
+              <div class="horizontalSeat Non-AC" id="78">78</div>
+              <div class="horizontalSeat Non-AC" id="77">77</div>
+              <div class="horizontalSeat Non-AC" id="76">76</div>
+              <div class="horizontalSeat Non-AC" id="75">75</div>
+              <div class="horizontalSeat Non-AC" id="74">74</div>
+              <div class="horizontalSeat Non-AC" id="73">73</div>
+              <div class="horizontalSeat Non-AC" id="72">72</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 12.5rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="62">62</div>
+              <div class="horizontalSeat Non-AC" id="63">63</div>
+              <div class="horizontalSeat Non-AC" id="64">64</div>
+              <div class="horizontalSeat Non-AC" id="65">65</div>
+              <div class="horizontalSeat Non-AC" id="66">66</div>
+              <div class="horizontalSeat Non-AC" id="67">67</div>
+              <div class="horizontalSeat Non-AC" id="68">68</div>
+              <div class="horizontalSeat Non-AC" id="69">69</div>
+              <div class="horizontalSeat Non-AC" id="70">70</div>
+              <div class="horizontalSeat Non-AC" id="71">71</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 16rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="61">61</div>
+              <div class="horizontalSeat Non-AC" id="60">60</div>
+              <div class="horizontalSeat Non-AC" id="59">59</div>
+              <div class="horizontalSeat Non-AC" id="58">58</div>
+              <div class="horizontalSeat Non-AC" id="57">57</div>
+              <div class="horizontalSeat Non-AC" id="56">56</div>
+              <div class="horizontalSeat Non-AC" id="55">55</div>
+              <div class="horizontalSeat Non-AC" id="54">54</div>
+              <div class="horizontalSeat Non-AC" id="53">53</div>
+              <div class="horizontalSeat Non-AC" id=""></div>
+              <div class="horizontalSeat Non-AC" id="52">52</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 18.5rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="41">41</div>
+              <div class="horizontalSeat Non-AC" id="42">42</div>
+              <div class="horizontalSeat Non-AC" id="43">43</div>
+              <div class="horizontalSeat Non-AC" id="44">44</div>
+              <div class="horizontalSeat Non-AC" id="45">45</div>
+              <div class="horizontalSeat Non-AC" id="46">46</div>
+              <div class="horizontalSeat Non-AC" id="47">47</div>
+              <div class="horizontalSeat Non-AC" id="48">48</div>
+              <div class="horizontalSeat Non-AC" id="49">49</div>
+              <div class="horizontalSeat Non-AC" id="50">50</div>
+              <div class="horizontalSeat Non-AC" id="51">51</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                bottom: 3.5rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="23">23</div>
+              <div class="horizontalSeat Non-AC" id="24">24</div>
+              <div class="horizontalSeat Non-AC" id="25">25</div>
+              <div class="horizontalSeat Non-AC" id="26">26</div>
+              <div class="horizontalSeat Non-AC" id="27">27</div>
+              <div class="horizontalSeat Non-AC" id="28">28</div>
+              <div class="horizontalSeat Non-AC" id="29">29</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                bottom: 6rem;
+                left: 5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Non-AC" id="40">40</div>
+              <div class="horizontalSeat Non-AC" id="39">39</div>
+              <div class="horizontalSeat Non-AC" id="38">38</div>
+              <div class="horizontalSeat Non-AC" id="37">37</div>
+              <div class="horizontalSeat Non-AC" id="36">36</div>
+              <div class="horizontalSeat Non-AC" id="35">35</div>
+              <div class="horizontalSeat Non-AC" id="34">34</div>
+              <div class="horizontalSeat Non-AC" id="33">33</div>
+              <div class="horizontalSeat Non-AC" id="32">32</div>
+              <div class="horizontalSeat Non-AC" id="31">31</div>
+              <div class="horizontalSeat Non-AC" id="30">30</div>
+            </div>
+          </div>
+
+          <div
+            style="
+              height: 40rem;
+              width: 38rem;
+              border-left: 0.5rem solid #e0e0e0;
+              border-right: 0rem solid #e0e0e0;
+              border-top: 0rem solid #e0e0e0;
+              border-bottom: 0.5rem solid #e0e0e0;
+              position: absolute;
+              right: 0rem;
+              top: 0rem;
+            "
+          >
+            <p
+              style="
+                position: absolute;
+                right: 20rem;
+                top: 21rem;
+                font-size: small;
+                font-weight: bold;
+                writing-mode: vertical-rl;
+                rotate: 270deg;
+              "
+            >
+              Luxury AC Cabin
+            </p>
+
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 0rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="132">17</div>
+              <div class="horizontalSeat Luxury AC" id="131">16</div>
+              <div class="horizontalSeat Luxury AC" id="130">15</div>
+              <div class="horizontalSeat Luxury AC" id="129">14</div>
+              <div class="horizontalSeat Luxury AC" id="128">13</div>
+              <div class="horizontalSeat Luxury AC" id="127">12</div>
+              <div class="horizontalSeat Luxury AC" id="126">11</div>
+              <div class="horizontalSeat Luxury AC" id="125">10</div>
+              <div class="horizontalSeat Luxury AC" id="124">9</div>
+              <div class="horizontalSeat Luxury AC" id="123">8</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 4.5rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="133">18</div>
+              <div class="horizontalSeat Luxury AC" id="134">19</div>
+              <div class="horizontalSeat Luxury AC" id="135">20</div>
+              <div class="horizontalSeat Luxury AC" id="136">21</div>
+              <div class="horizontalSeat Luxury AC" id="137">22</div>
+              <div class="horizontalSeat Luxury AC" id="138">23</div>
+              <div class="horizontalSeat Luxury AC" id="139">24</div>
+              <div class="horizontalSeat Luxury AC" id="140">25</div>
+              <div class="horizontalSeat Luxury AC" id="141">26</div>
+              <div class="horizontalSeat Luxury AC" id="142">27</div>
+              <div class="horizontalSeat Luxury AC" id="143">28</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 7.2rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="169">54</div>
+              <div class="horizontalSeat Luxury AC" id="168">53</div>
+              <div class="horizontalSeat Luxury AC" id="167">52</div>
+              <div class="horizontalSeat Luxury AC" id="166">51</div>
+              <div class="horizontalSeat Luxury AC" id="165">50</div>
+              <div class="horizontalSeat Luxury AC" id="164">49</div>
+              <div class="horizontalSeat Luxury AC" id="163">48</div>
+              <div class="horizontalSeat Luxury AC" id="162">47</div>
+              <div class="horizontalSeat Luxury AC" id="161">46</div>
+              <div class="horizontalSeat Luxury AC" id="160">45</div>
+              <div class="horizontalSeat Luxury AC" id="159">44</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 11.7rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="170">55</div>
+              <div class="horizontalSeat Luxury AC" id="171">56</div>
+              <div class="horizontalSeat Luxury AC" id="172">57</div>
+              <div class="horizontalSeat Luxury AC" id="173">58</div>
+              <div class="horizontalSeat Luxury AC" id="174">59</div>
+              <div class="horizontalSeat Luxury AC" id="175">60</div>
+              <div class="horizontalSeat Luxury AC" id="176">61</div>
+              <div class="horizontalSeat Luxury AC" id="177">62</div>
+              <div class="horizontalSeat Luxury AC" id="178">63</div>
+              <div class="horizontalSeat Luxury AC" id="179">64</div>
+              <div class="horizontalSeat Luxury AC" id="180">65</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 14.4rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="205">90</div>
+              <div class="horizontalSeat Luxury AC" id="204">89</div>
+              <div class="horizontalSeat Luxury AC" id="203">88</div>
+              <div class="horizontalSeat Luxury AC" id="202">87</div>
+              <div class="horizontalSeat Luxury AC" id="201">86</div>
+              <div class="horizontalSeat Luxury AC" id="200">85</div>
+              <div class="horizontalSeat Luxury AC" id="199">84</div>
+              <div class="horizontalSeat Luxury AC" id="198">83</div>
+              <div class="horizontalSeat Luxury AC" id="197">82</div>
+              <div class="horizontalSeat Luxury AC" id="196">81</div>
+              <div class="horizontalSeat Luxury AC" id="195">80</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 18.9rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="206">91</div>
+              <div class="horizontalSeat Luxury AC" id="207">92</div>
+              <div class="horizontalSeat Luxury AC" id="208">93</div>
+              <div class="horizontalSeat Luxury AC" id="209">94</div>
+              <div class="horizontalSeat Luxury AC" id="210">95</div>
+              <div class="horizontalSeat Luxury AC" id="211">96</div>
+              <div class="horizontalSeat Luxury AC" id="212">97</div>
+              <div class="horizontalSeat Luxury AC" id="213">98</div>
+              <div class="horizontalSeat Luxury AC" id="214">99</div>
+              <div class="horizontalSeat Luxury AC" id="215">100</div>
+              <div class="horizontalSeat Luxury AC" id="216">101</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 21.6rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="239">124</div>
+              <div class="horizontalSeat Luxury AC" id="238">123</div>
+              <div class="horizontalSeat Luxury AC" id="237">122</div>
+              <div class="horizontalSeat Luxury AC" id="236">121</div>
+              <div class="horizontalSeat Luxury AC" id="235">120</div>
+              <div class="horizontalSeat Luxury AC" id="234">119</div>
+              <div class="horizontalSeat Luxury AC" id="233">118</div>
+              <div class="horizontalSeat Luxury AC" id="232">117</div>
+              <div class="horizontalSeat Luxury AC" id="231">116</div>
+              <div class="horizontalSeat Luxury AC" id="230">115</div>
+              <div class="horizontalSeat Luxury AC" id="229">114</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 26.1rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="240">125</div>
+              <div class="horizontalSeat Luxury AC" id="241">126</div>
+              <div class="horizontalSeat Luxury AC" id="242">127</div>
+              <div class="horizontalSeat Luxury AC" id="243">128</div>
+              <div class="horizontalSeat Luxury AC" id="244">129</div>
+              <div class="horizontalSeat Luxury AC" id="245">130</div>
+              <div class="horizontalSeat Luxury AC" id="246">131</div>
+              <div class="horizontalSeat Luxury AC" id="247">132</div>
+              <div class="horizontalSeat Luxury AC" id="248">133</div>
+              <div class="horizontalSeat Luxury AC" id="249">134</div>
+              <div class="horizontalSeat Luxury AC" id="250">135</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                left: 28.8rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="273">158</div>
+              <div class="horizontalSeat Luxury AC" id="272">157</div>
+              <div class="horizontalSeat Luxury AC" id="271">156</div>
+              <div class="horizontalSeat Luxury AC" id="270">155</div>
+              <div class="horizontalSeat Luxury AC" id="269">154</div>
+              <div class="horizontalSeat Luxury AC" id="268">153</div>
+              <div class="horizontalSeat Luxury AC" id="267">152</div>
+              <div class="horizontalSeat Luxury AC" id="266">151</div>
+              <div class="horizontalSeat Luxury AC" id="265">150</div>
+              <div class="horizontalSeat Luxury AC" id="264">149</div>
+              <div class="horizontalSeat Luxury AC" id="263">148</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0rem;
+                right: 0rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="274">159</div>
+              <div class="horizontalSeat Luxury AC" id="275">160</div>
+              <div class="horizontalSeat Luxury AC" id="276">161</div>
+              <div class="horizontalSeat Luxury AC" id="277">162</div>
+              <div class="horizontalSeat Luxury AC" id="278">163</div>
+              <div class="horizontalSeat Luxury AC" id="279">164</div>
+              <div class="horizontalSeat Luxury AC" id="280">165</div>
+              <div class="horizontalSeat Luxury AC" id="281">166</div>
+              <div class="horizontalSeat Luxury AC" id="282">167</div>
+              <div class="horizontalSeat Luxury AC" id="283">168</div>
+              <div class="horizontalSeat Luxury AC" id="284">169</div>
+              <div class="horizontalSeat Luxury AC" id="285">170</div>
+              <div class="horizontalSeat Luxury AC" id="286">171</div>
+              <div class="horizontalSeat Luxury AC" id="287">172</div>
+              <div class="horizontalSeat Luxury AC" id="288">173</div>
+              <div class="horizontalSeat Luxury AC" id="289">174</div>
+              <div class="horizontalSeat Luxury AC" id="290">175</div>
+              <div class="horizontalSeat Luxury AC" id="291">176</div>
+            </div>
+
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 0rem;
+                gap: 0.6rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="122">7</div>
+              <div class="horizontalSeat Luxury AC" id="121">6</div>
+              <div class="horizontalSeat Luxury AC" id="120">5</div>
+              <div class="horizontalSeat Luxury AC" id="119">4</div>
+              <div class="horizontalSeat Luxury AC" id="118">3</div>
+              <div class="horizontalSeat Luxury AC" id="117">2</div>
+              <div class="horizontalSeat Luxury AC" id="116">1</div>
+            </div>
+
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 4.5rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="144">29</div>
+              <div class="horizontalSeat Luxury AC" id="145">30</div>
+              <div class="horizontalSeat Luxury AC" id="146">31</div>
+              <div class="horizontalSeat Luxury AC" id="147">32</div>
+              <div class="horizontalSeat Luxury AC" id="148">33</div>
+              <div class="horizontalSeat Luxury AC" id="149">34</div>
+              <div class="horizontalSeat Luxury AC" id="150">35</div>
+              <div class="horizontalSeat Luxury AC" id="151">36</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 7.2rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="158">43</div>
+              <div class="horizontalSeat Luxury AC" id="157">42</div>
+              <div class="horizontalSeat Luxury AC" id="156">41</div>
+              <div class="horizontalSeat Luxury AC" id="155">40</div>
+              <div class="horizontalSeat Luxury AC" id="154">39</div>
+              <div class="horizontalSeat Luxury AC" id="153">38</div>
+              <div class="horizontalSeat Luxury AC" id="152">37</div>
+            </div>
+
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 11.7rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="181">66</div>
+              <div class="horizontalSeat Luxury AC" id="182">67</div>
+              <div class="horizontalSeat Luxury AC" id="183">68</div>
+              <div class="horizontalSeat Luxury AC" id="184">69</div>
+              <div class="horizontalSeat Luxury AC" id="185">70</div>
+              <div class="horizontalSeat Luxury AC" id="186">71</div>
+              <div class="horizontalSeat Luxury AC" id="187">72</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 14.4rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="194">79</div>
+              <div class="horizontalSeat Luxury AC" id="193">78</div>
+              <div class="horizontalSeat Luxury AC" id="192">77</div>
+              <div class="horizontalSeat Luxury AC" id="191">76</div>
+              <div class="horizontalSeat Luxury AC" id="190">75</div>
+              <div class="horizontalSeat Luxury AC" id="189">74</div>
+              <div class="horizontalSeat Luxury AC" id="188">73</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 18.9rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="217">102</div>
+              <div class="horizontalSeat Luxury AC" id="218">103</div>
+              <div class="horizontalSeat Luxury AC" id="219">104</div>
+              <div class="horizontalSeat Luxury AC" id="220">105</div>
+              <div class="horizontalSeat Luxury AC" id="221">106</div>
+              <div class="horizontalSeat Luxury AC" id="222">107</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 21.6rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="228">113</div>
+              <div class="horizontalSeat Luxury AC" id="227">112</div>
+              <div class="horizontalSeat Luxury AC" id="226">111</div>
+              <div class="horizontalSeat Luxury AC" id="225">110</div>
+              <div class="horizontalSeat Luxury AC" id="224">109</div>
+              <div class="horizontalSeat Luxury AC" id="223">108</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 26.1rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="251">136</div>
+              <div class="horizontalSeat Luxury AC" id="252">137</div>
+              <div class="horizontalSeat Luxury AC" id="253">138</div>
+              <div class="horizontalSeat Luxury AC" id="254">139</div>
+              <div class="horizontalSeat Luxury AC" id="255">140</div>
+              <div class="horizontalSeat Luxury AC" id="256">141</div>
+            </div>
+            <div
+              class=""
+              style="
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0rem;
+                left: 28.8rem;
+                gap: 0.3rem;
+              "
+            >
+              <div class="horizontalSeat Luxury AC" id="262">147</div>
+              <div class="horizontalSeat Luxury AC" id="261">146</div>
+              <div class="horizontalSeat Luxury AC" id="260">145</div>
+              <div class="horizontalSeat Luxury AC" id="259">144</div>
+              <div class="horizontalSeat Luxury AC" id="258">143</div>
+              <div class="horizontalSeat Luxury AC" id="257">142</div>
+            </div>
+          </div>
+
+          <div
+            style="
+              height: 30rem;
+              width: 75rem;
+              border-left: 0.5rem solid #e0e0e0;
+              border-right: 0rem solid #e0e0e0;
+              border-top: 0rem solid #e0e0e0;
+              border-bottom: 0.5rem solid #e0e0e0;
+              position: absolute;
+              right: 0rem;
+              bottom: 0rem;
+            "
+          >
+            <p
+              style="
+                position: absolute;
+                right: 6rem;
+                top: 7rem;
+                font-size: small;
+                font-weight: bold;
+                writing-mode: vertical-rl;
+                rotate: 180deg;
+              "
+            ></p>
+
+            <div
+              style="
+                height: 11rem;
+                width: 11rem;
+                border-left: 0.5rem solid #e0e0e0;
+                border-right: 0rem solid #e0e0e0;
+                border-top: 0.5rem solid #e0e0e0;
+                border-bottom: 0rem solid #e0e0e0;
+                position: absolute;
+                right: 0rem;
+                bottom: 0rem;
+              "
+            >
+              <p
+                style="
+                  position: absolute;
+                  right: 4rem;
+                  top: 3rem;
+                  font-size: small;
+                  font-weight: bold;
+                  writing-mode: vertical-rl;
+                  rotate: 270deg;
+                "
+              >
+                WASHROOM
+              </p>
+            </div>
+
+            <div
+              style="
+                height: 11rem;
+                width: 11rem;
+                border-left: 0.5rem solid #e0e0e0;
+                border-right: 0rem solid #e0e0e0;
+                border-top: 0rem solid #e0e0e0;
+                border-bottom: 0rem solid #e0e0e0;
+                position: absolute;
+                right: 64rem;
+                bottom: 29rem;
+              "
+            >
+              <p
+                style="
+                  position: absolute;
+                  right: 4rem;
+                  top: 3rem;
+                  font-size: small;
+                  font-weight: bold;
+                  writing-mode: vertical-rl;
+                  rotate: 270deg;
+                "
+              ></p>
+
+              <div
+                style="
+                  height: 13rem;
+                  width: 13rem;
+                  border-left: 0rem solid #e0e0e0;
+                  border-right: 0rem solid #e0e0e0;
+                  border-top: 0.5rem solid #e0e0e0;
+                  border-bottom: 0.5rem solid #e0e0e0;
+                  position: absolute;
+                  left: 0rem;
+                  top: 0rem;
+                "
+              >
+                <p
+                  style="
+                    position: absolute;
+                    right: 6rem;
+                    top: 7rem;
+                    font-size: small;
+                    font-weight: bold;
+                    writing-mode: vertical-rl;
+                    rotate: 270deg;
+                  "
+                >
+                  OFFICE
+                </p>
+              </div>
+              <div
+                style="
+                  height: 20rem;
+                  width: 10rem;
+                  border-left: 0.5rem solid #e0e0e0;
+                  border-right: 0.5rem solid #e0e0e0;
+                  border-top: 0.5rem solid #e0e0e0;
+                  border-bottom: 0.5rem solid #e0e0e0;
+                  position: absolute;
+                  left: 13rem;
+                  top: 0rem;
+                "
+              >
+                <p
+                  style="
+                    position: absolute;
+                    right: 4rem;
+                    top: 3rem;
+                    font-size: small;
+                    font-weight: bold;
+                    writing-mode: vertical-rl;
+                    rotate: 270deg;
+                  "
+                >
+                  DISCUSSION ROOM
+                </p>
+                <p
+                  style="
+                    position: absolute;
+                    right: 4rem;
+                    top: 13rem;
+                    font-size: small;
+                    font-weight: bold;
+                    writing-mode: vertical-rl;
+                    rotate: 270deg;
+                  "
+                >
+                  PANTRY
+                </p>
+                <p
+                  style="
+                    position: absolute;
+                    right: 4rem;
+                    top: 30rem;
+                    font-size: small;
+                    font-weight: bold;
+                    writing-mode: vertical-rl;
+                    rotate: 270deg;
+                  "
+                >
+                  WORKSPACE
+                </p>
+
+                <p
+                  style="
+                    position: absolute;
+                    right: -20rem;
+                    top: 20rem;
+                    font-size: small;
+                    font-weight: bold;
+                    writing-mode: vertical-rl;
+                    rotate: 270deg;
+                  "
+                >
+                  CANTEEN
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+              background-color: #e0e0e0;
+              position: absolute;
+              width: 1rem;
+              height: 41rem;
+              top: 32rem;
+              left: -1rem;
+            "
+          ></div>
+          <div
+            style="
+              background-color: #e0e0e0;
+              position: absolute;
+              width: 44rem;
+              height: 1rem;
+              bottom: -1rem;
+              left: -1rem;
+            "
+          ></div>
+          <div
+            style="
+              background-color: #e0e0e0;
+              position: absolute;
+              width: 0.5rem;
+              height: 3.5rem;
+              top: 24rem;
+              left: 37.5rem;
+            "
+          ></div>
+          <div
+            style="
+              background-color: #e0e0e0;
+              position: absolute;
+              width: 0.5rem;
+              height: 8rem;
+              top: 20.5rem;
+              left: 80rem;
+            "
+          ></div>
+          <div
+            style="
+              background-color: #e0e0e0;
+              position: absolute;
+              width: 1rem;
+              height: 13rem;
+              bottom: 13rem;
+              right: -1rem;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cabinmate-axpert-api.s3.ap-south-1.amazonaws.com/html-files/JS/layout.js?v=20250301"></script>
+  </body>
+</html>

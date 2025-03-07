@@ -1,0 +1,1606 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mumbai Layout</title>
+  <!-- <script type="text/javascript" src="../../UI/axpertUI/plugins.bundle.js"></script>
+  <script type="text/javascript" src="../../UI/axpertUI/scripts.bundle.js"></script>
+  <script type="text/javascript" src="../../Js/noConflict.min.js"></script>
+  <script type="text/javascript" src="../../ThirdParty/jquery-confirm-master/jquery-confirm.min.js"></script>
+  <script type="text/javascript" src="../../Js/alerts.min.js"></script>
+  <script type="text/javascript" src="../../Js/common.min.js?v=13301"></script>
+  <script src="../../AxpertAPIs/js/AxpertAPIs.js?v=1"></script>
+  <link type="text/css" rel="stylesheet" href="../../cabinmate/HTMLPages/Css/layout.css?v=1730965694092"> -->
+
+
+  <link type="text/css" rel="stylesheet" href="./layout.css">
+  <style>
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* Tooltip text */
+    .tooltip-container .tooltip-text {
+      visibility: hidden;
+      width: 120px;
+      background-color: rgb(104, 104, 104);
+      color: #fff;
+      text-align: center;
+      writing-mode: horizontal-tb;
+      padding: 5px;
+      border-radius: 5px;
+
+      /* Positioning */
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      /* Show above the container */
+      left: 50%;
+      transform: translateX(-50%);
+
+      /* Animation */
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    /* Show tooltip on hover */
+    .tooltip-container:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .expiring {
+      background-color: #ff0000;
+      color: white;
+    }
+
+    .soon {
+      background-color: #ff9900;
+      color: white;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+    }
+
+    .verticalSeat:hover:has(.available) {
+      background-color: #32755c;
+      color: white;
+    }
+
+    .horizontalSeat:hover:has(.available) {
+      background-color: #32755c;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 style="text-align: center;">Mumbai Cabins Seat Occupancies</h3>
+  <div style="width: 1600px; overflow-x: scroll">
+    <div style="position: relative; margin: 40px; width: 1250px; height: 900px">
+      <!--Top div-->
+      <div style="
+            position: absolute;
+            left: 5rem;
+            width: 55rem;
+            height: 30rem;
+            top: 3rem;
+            border: 1rem solid #e0e0e0;
+            box-sizing: border-box;
+            border-bottom: 1rem solid #e0e0e0;
+          ">
+        <!-- top-Vertical Seats -->
+        <div style="
+              display: flex;
+              position: absolute;
+              top: 0rem;
+              left: 2rem;
+              gap: 0.3rem;
+            ">
+          <div class="verticalSeat AC" id="10">10</div>
+          <div class="verticalSeat AC" id="11">11</div>
+          <div class="verticalSeat AC" id="12">12</div>
+          <div class="verticalSeat AC" id="13">13</div>
+          <div class="verticalSeat AC" id="14">14</div>
+          <div class="verticalSeat AC" id="15">15</div>
+          <div class="verticalSeat AC" id="16">16</div>
+          <div class="verticalSeat AC" id="17">17</div>
+          <div class="verticalSeat AC" id="18">18</div>
+          <div class="verticalSeat AC" id="19">19</div>
+          <div class="verticalSeat AC" id="20">20</div>
+          <div class="verticalSeat AC" id="21">21</div>
+          <div class="verticalSeat AC" id="22">22</div>
+          <div class="verticalSeat AC" id="23">23</div>
+          <div class="verticalSeat AC" id="24">24</div>
+          <div class="verticalSeat AC" id="25">25</div>
+          <div class="verticalSeat AC" id="26">26</div>
+          <div class="verticalSeat AC" id="27">27</div>
+          <div class="verticalSeat AC" id="28">28</div>
+          <div class="verticalSeat AC" id="29">29</div>
+          <div class="verticalSeat AC" id="30">30</div>
+          <div class="verticalSeat AC" id="31">31</div>
+          <div class="verticalSeat AC" id="32">32</div>
+          <div class="verticalSeat AC" id="33">33</div>
+        </div>
+
+        <!--left extreme horizontal seats-->
+        <div class="seating_vertical">
+          <div class="horizontalSeat" id="9" style="margin-top: 50px;">9</div>
+          <div class="horizontalSeat" id="8">8</div>
+          <div class="horizontalSeat" id="7">7</div>
+          <div class="horizontalSeat" id="6">6</div>
+          <div class="horizontalSeat" id="5">5</div>
+          <div class="horizontalSeat" id="4">4</div>
+          <div class="horizontalSeat" id="3">3</div>
+          <div class="horizontalSeat" id="2">2</div>
+          <div class="horizontalSeat" id="1">1</div>
+        </div>
+
+        <!--vertical right seats-->
+        <div style="
+              display: flex;
+              position: absolute;
+              top: 4.5rem;
+              right: 8rem;
+              gap: 0.3rem;
+            ">
+          <div class="verticalSeat AC" id="45">45</div>
+          <div class="verticalSeat AC" id="44">44</div>
+          <div class="verticalSeat AC" id="43">43</div>
+          <div class="verticalSeat AC" id="42">42</div>
+          <div class="verticalSeat AC" id="41">41</div>
+          <div class="verticalSeat AC" id="40">40</div>
+          <div class="verticalSeat AC" id="39">39</div>
+          <div class="verticalSeat AC" id="38">38</div>
+          <div class="verticalSeat AC" id="37">37</div>
+          <div class="verticalSeat AC" id="36">36</div>
+          <div class="verticalSeat AC" id="35">35</div>
+          <div class="verticalSeat AC" id="34">34</div>
+        </div>
+        <div style="
+              display: flex;
+              position: absolute;
+              top: 7.2rem;
+              right: 8rem;
+              gap: 0.3rem;
+            ">
+          <div class="verticalSeat AC" id="46">46</div>
+          <div class="verticalSeat AC" id="47">47</div>
+          <div class="verticalSeat AC" id="48">48</div>
+          <div class="verticalSeat AC" id="49">49</div>
+          <div class="verticalSeat AC" id="50">50</div>
+          <div class="verticalSeat AC" id="51">51</div>
+          <div class="verticalSeat AC" id="52">52</div>
+          <div class="verticalSeat AC" id="53">53</div>
+          <div class="verticalSeat AC" id="54">54</div>
+          <div class="verticalSeat AC" id="55">55</div>
+          <div class="verticalSeat AC" id="56">56</div>
+          <div class="verticalSeat AC" id="57">57</div>
+        </div>
+
+        <!--vertical left seats-->
+        <div style="
+              display: flex;
+              position: absolute;
+              top: 11.3rem;
+              left: 18.2rem;
+              gap: 0.3rem;
+            ">
+          <div class="verticalSeat AC" id="70">70</div>
+          <div class="verticalSeat AC" id="69">69</div>
+          <div class="verticalSeat AC" id="68">68</div>
+          <div class="verticalSeat AC" id="67">67</div>
+          <div class="verticalSeat AC" id="66">66</div>
+          <div class="verticalSeat AC" id="65">65</div>
+          <div class="verticalSeat AC" id="64">64</div>
+          <div class="verticalSeat AC" id="63">63</div>
+          <div class="verticalSeat AC" id="62">62</div>
+          <div class="verticalSeat AC" id="61">61</div>
+          <div class="verticalSeat AC" id="60">60</div>
+          <div class="verticalSeat AC" id="59">59</div>
+          <div class="verticalSeat AC" id="58">58</div>
+        </div>
+        <div style="
+              display: flex;
+              position: absolute;
+              top: 14rem;
+              left: 18.2rem;
+              gap: 0.3rem;
+            ">
+          <div class="verticalSeat AC" id="71">71</div>
+          <div class="verticalSeat AC" id="72">72</div>
+          <div class="verticalSeat AC" id="73">73</div>
+          <div class="verticalSeat AC" id="74">74</div>
+          <div class="verticalSeat AC" id="75">75</div>
+          <div class="verticalSeat AC" id="76">76</div>
+          <div class="verticalSeat AC" id="77">77</div>
+          <div class="verticalSeat AC" id="78">78</div>
+          <div class="verticalSeat AC" id="79">79</div>
+          <div class="verticalSeat AC" id="80">80</div>
+          <div class="verticalSeat AC" id="81">81</div>
+          <div class="verticalSeat AC" id="82">82</div>
+          <div class="verticalSeat AC" id="83">83</div>
+        </div>
+
+        <!--vertical right seats2-->
+        <div style="
+              display: flex;
+              position: absolute;
+              bottom: 7.4rem;
+              right: 8rem;
+              gap: 0.3rem;
+            ">
+          <div class="verticalSeat AC" id="85">85</div>
+          <div class="verticalSeat AC" id="86">86</div>
+          <div class="verticalSeat AC" id="87">87</div>
+          <div class="verticalSeat AC" id="88">88</div>
+          <div class="verticalSeat AC" id="89">89</div>
+          <div class="verticalSeat AC" id="90">90</div>
+          <div class="verticalSeat AC" id="91">91</div>
+          <div class="verticalSeat AC" id="92">92</div>
+          <div class="verticalSeat AC" id="93">93</div>
+          <div class="verticalSeat AC" id="94">94</div>
+          <div class="verticalSeat AC" id="95">95</div>
+          <div class="verticalSeat AC" id="96">96</div>
+        </div>
+        <div style="
+              display: flex;
+              position: absolute;
+              bottom: 4.7rem;
+              right: 11.7rem;
+              gap: 0.3em;
+            ">
+          <div class="verticalSeat Luxury AC" id="97">97</div>
+          <div class="verticalSeat Luxury AC" id="98">98</div>
+          <div class="verticalSeat Luxury AC" id="99">99</div>
+          <div class="verticalSeat Luxury AC" id="100">100</div>
+          <div class="verticalSeat Luxury AC" id="101">101</div>
+          <div class="verticalSeat Luxury AC" id="102">102</div>
+          <div class="verticalSeat Luxury AC" id="103">103</div>
+          <div class="verticalSeat Luxury AC" id="104">104</div>
+          <div class="verticalSeat Luxury AC" id="105">105</div>
+          <div class="verticalSeat Luxury AC" id="106">106</div>
+          <div class="verticalSeat Luxury AC" id="107">107</div>
+        </div>
+
+        <!--vertical bottom seats-->
+        <div style="
+              display: flex;
+              position: absolute;
+              bottom: 0.1rem;
+              left: 18rem;
+              gap: 0.4rem;
+            ">
+          <div class="verticalSeat Luxury AC" id="108">108</div>
+          <div class="verticalSeat Luxury AC" id="109">109</div>
+          <div class="verticalSeat Luxury AC" id="110">110</div>
+          <div class="verticalSeat Luxury AC" id="111">111</div>
+          <div class="verticalSeat Luxury AC" id="112">112</div>
+          <div class="verticalSeat Luxury AC" id="113">113</div>
+          <div class="verticalSeat Luxury AC" id="114">114</div>
+          <div class="verticalSeat Luxury AC" id="115">115</div>
+          <div class="verticalSeat Luxury AC" id="116">116</div>
+          <div class="verticalSeat Luxury AC" id="117">117</div>
+          <div class="verticalSeat Luxury AC" id="118">118</div>
+          <div class="verticalSeat Luxury AC" id="119">119</div>
+          <div class="verticalSeat Luxury AC" id="120">120</div>
+        </div>
+
+        <!--right seating-->
+        <div style="
+              height: 30rem;
+              width: 4.5rem;
+              border-left: 0.5rem solid #e0e0e0;
+              position: absolute;
+              right: 0;
+              bottom: -1rem;
+            ">
+          <p style="
+                font-size: medium;
+                font-weight: bold;
+                position: relative;
+                left: 0rem;
+                bottom: -6rem;
+                transform: rotate(-90deg);
+              ">
+            DISCUSSION
+          </p>
+          <p style="
+                font-size: medium;
+                font-weight: bold;
+                position: relative;
+                left: 0.5rem;
+                bottom: -20rem;
+                transform: rotate(-90deg);
+              ">
+            DINNING
+          </p>
+          <p style="
+                font-size: medium;
+                font-weight: bold;
+                position: relative;
+                left: -0.9rem;
+                bottom: -15rem;
+                transform: rotate(-90deg);
+              ">
+            LOCKERS
+          </p>
+
+          <!--door-->
+          <div style="
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                width: 0.5rem;
+                height: 5rem;
+                top: 5rem;
+                left: -0.5rem;
+              "></div>
+        </div>
+        <!--Middle box-->
+        <div style="
+              height: 14rem;
+              width: 12.2rem;
+              border-right: 0.5rem solid #e0e0e0;
+              border-left: 0.5rem solid #e0e0e0;
+              border-top: 0.5rem solid #e0e0e0;
+              border-bottom: 0.5rem solid #e0e0e0;
+              position: absolute;
+              left: 6rem;
+              top: 5.5rem;
+            ">
+          <!--mid-door-->
+          <div style="
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                width: 0.5rem;
+                height: 3rem;
+                bottom: 5rem;
+                left: -0.5rem;
+              "></div>
+          <!--vertical mid-top seats-->
+          <div style="
+                display: flex;
+                position: absolute;
+                top: 0rem;
+                left: 0.4rem;
+                gap: 0.3rem;
+              ">
+            <!-- <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div> -->
+          </div>
+          <!--vertical-mid-->
+          <div style="
+                display: flex;
+                position: absolute;
+                top: 3.8rem;
+                right: 0.01rem;
+                gap: 0.3rem;
+              ">
+            <!-- <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div> -->
+          </div>
+          <div style="
+                display: flex;
+                position: absolute;
+                top: 6.5rem;
+                right: 0.01rem;
+                gap: 0.3rem;
+              ">
+            <!-- <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div> -->
+          </div>
+          <!--vertical-mid-bottom-->
+          <div style="
+                display: flex;
+                position: absolute;
+                bottom: 0rem;
+                left: 0.4rem;
+                gap: 0.3rem;
+              ">
+            <!-- <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div>
+            <div class="verticalSeat"></div> -->
+          </div>
+        </div>
+
+        <div style="
+              height: 4.8rem;
+              width: 7.5rem;
+              border-right: 0.5rem solid #e0e0e0;
+              border-left: 0.5rem solid #e0e0e0;
+              border-top: 0.5rem solid #e0e0e0;
+              position: absolute;
+              left: 6rem;
+              bottom: 0rem;
+            ">
+          <p style="
+                font-size: large;
+                font-weight: bold;
+                position: relative;
+                left: 1rem;
+                top: 1rem;
+              ">
+            TOILET
+          </p>
+          <!--door-->
+          <div style="
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                width: 2rem;
+                height: 0.5rem;
+                top: -0.5rem;
+                right: 0rem;
+              "></div>
+        </div>
+      </div>
+
+      <!--Bottom div-->
+      <div style="
+            position: absolute;
+            left: 5rem;
+            width: 14rem;
+            height: 17rem;
+            top: 32.5rem;
+            border: 1rem solid #e0e0e0;
+            border-top: 0rem solid #ffffff;
+            box-sizing: border-box;
+          ">
+        <!-- Entrance door -->
+        <div style="
+              background-color: rgb(255, 255, 255);
+              position: absolute;
+              width: 1rem;
+              height: 5rem;
+              bottom: 1.5rem;
+              left: -1rem;
+            ">
+          <p style="
+                font-size: large;
+                font-weight: bold;
+                position: relative;
+                left: 3rem;
+                bottom: -5rem;
+                transform: rotate(-90deg);
+              ">
+            ENTRANCE
+          </p>
+        </div>
+        <!-- Top -->
+        <div style="
+              background-color: rgb(255, 255, 255);
+              position: absolute;
+              width: 12rem;
+              height: 0.5rem;
+              top: 0rem;
+              left: 0rem;
+            "></div>
+        <!-- Top door -->
+        <div style="
+              background-color: rgb(255, 255, 255);
+              position: absolute;
+              width: 2rem;
+              height: 0.59rem;
+              top: -0.54rem;
+              left: 2rem;
+            "></div>
+        <div style="
+              position: absolute;
+              width: 0.5rem;
+              height: 12rem;
+              background-color: #e0e0e0;
+              left: 5.6rem;
+            ">
+          <p style="
+                font-size: large;
+                font-weight: bold;
+                position: relative;
+                left: 1rem;
+                top: 1rem;
+              ">
+            OFFICE
+          </p>
+        </div>
+      </div>
+
+      <!-- <div
+          style="
+            position: absolute;
+            left: 20rem;
+            top: 35rem;
+            width: 50rem;
+            display: flex;
+            align-items: flex-start; /* Align items to the start of the flex container */
+            gap: 1rem; /* Space between text and logo */
+          "
+        >
+          <div style="display: flex; flex-direction: column; gap: 0.2rem">
+            Space between elements
+            <h2 style="color: orange; font-size: 0.875rem; margin-left: 2rem">
+              CABIN LAYOUT / FLOOR PLAN
+            </h2>
+            <h2
+              style="
+                color: orange;
+                font-size: 0.875rem;
+                margin: 0;
+                text-align: center;
+              "
+            >
+              MUMBAI BRANCH
+            </h2>
+            Centered text
+            <p
+              style="
+                font-size: 0.75rem;
+                margin: 0;
+                font-weight: bold;
+                margin-left: 2rem;
+              "
+            >
+              TOTAL APPROX CABINS: 152
+            </p>
+            <p
+              style="
+                font-size: 0.75rem;
+                margin: 0;
+                font-weight: bold;
+                margin-left: 2rem;
+              "
+            >
+              TOTAL APPROX LOCKERS: 100
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem">
+              <div
+                style="
+                  background-color: rgb(98, 59, 59);
+                  color: white;
+                  padding: 5px;
+                  width: 90px;
+                  text-align: center;
+                  font-size: 0.75rem;
+                  margin-left: 2rem;
+                "
+              >
+                Luxury AC - 24
+              </div>
+              <div
+                style="
+                  background-color: yellow;
+                  color: black;
+                  padding: 5px;
+                  width: 90px;
+                  text-align: center;
+                  font-size: 0.75rem;
+                  font-weight: bold;
+                  margin-left: 2rem;
+                "
+              >
+                Semi AC - 96
+              </div>
+              <div
+                style="
+                  background-color: green;
+                  color: white;
+                  padding: 5px;
+                  width: 90px;
+                  text-align: center;
+                  font-size: 0.75rem;
+                  margin-left: 2rem;
+                "
+              >
+                Shift Basis - 32
+              </div>
+            </div>
+          </div>
+
+         
+          <img
+            src="./logo.png"
+            alt="Logo"
+            style="
+              width: 400px;
+              height: 100px;
+              object-fit: contain;
+              margin-top: 75px;
+              margin-left: -7rem;
+            "
+          />
+        </div> -->
+    </div>
+  </div>
+  <script>
+
+
+    let seatsData
+    // const result = AxCallSqlDataAPI('AXPKEY000000010053', {})
+
+    // const response = JSON.parse(result)
+    // console.log(response['mumbai occupancy list'].rows)
+    // seatsData = response['mumbai occupancy list'].rows
+    seatsData = [
+      {
+        "seat_no": "m114",
+        "seat_id": "114",
+        "booking_id": "BKG000406",
+        "uname": "Rohith Badrinath",
+        "phone": "9946484540",
+        "status": "available"
+      },
+      {
+        "seat_no": "m108",
+        "seat_id": "108",
+        "booking_id": "BKG000407",
+        "uname": "Rohith Badrinath",
+        "phone": "9978464846",
+        "status": "available"
+      },
+      {
+        "seat_no": "m68",
+        "seat_id": "68",
+        "booking_id": "BKG000408",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "available"
+      },
+      {
+        "seat_no": "m110",
+        "seat_id": "110",
+        "booking_id": "BKG000411",
+        "uname": "Rohith Badrinath",
+        "phone": "9978464846",
+        "status": "available"
+      },
+      {
+        "seat_no": "m1",
+        "seat_id": "1",
+        "booking_id": "BKG000412",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m2",
+        "seat_id": "2",
+        "booking_id": "BKG000413",
+        "uname": "Ananth",
+        "phone": "8757457434",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m88",
+        "seat_id": "88",
+        "booking_id": "BKG000417",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m3",
+        "seat_id": "3",
+        "booking_id": "BKG000418",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "available"
+      },
+      {
+        "seat_no": "m69",
+        "seat_id": "69",
+        "booking_id": "BKG000430",
+        "uname": "Akash R",
+        "phone": "9448423669",
+        "status": "available"
+      },
+      {
+        "seat_no": "m69",
+        "seat_id": "69",
+        "booking_id": "BKG000431",
+        "uname": "Akash R",
+        "phone": "9448423669",
+        "status": "available"
+      },
+      {
+        "seat_no": "m68",
+        "seat_id": "68",
+        "booking_id": "BKG000432",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m3",
+        "seat_id": "3",
+        "booking_id": "BKG000455",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m96",
+        "seat_id": "96",
+        "booking_id": "BKG000456",
+        "uname": "Ananth",
+        "phone": "8757457434",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m96",
+        "seat_id": "96",
+        "booking_id": "BKG000457",
+        "uname": "Ananth",
+        "phone": "8757457434",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m97",
+        "seat_id": "97",
+        "booking_id": "BKG000459",
+        "uname": "Akash R",
+        "phone": "9448423669",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m98",
+        "seat_id": "98",
+        "booking_id": "BKG000460",
+        "uname": "Akash R",
+        "phone": "9448423669",
+        "status": "available"
+      },
+      {
+        "seat_no": "m99",
+        "seat_id": "99",
+        "booking_id": "BKG000461",
+        "uname": "Ananth",
+        "phone": "8757457434",
+        "status": "available"
+      },
+      {
+        "seat_no": "m103",
+        "seat_id": "103",
+        "booking_id": "BKG000462",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m102",
+        "seat_id": "102",
+        "booking_id": "BKG000463",
+        "uname": "jhonty",
+        "phone": "9435678654",
+        "status": "available"
+      },
+      {
+        "seat_no": "m101",
+        "seat_id": "101",
+        "booking_id": "BKG000465",
+        "uname": "Akash R",
+        "phone": "9448423669",
+        "status": "available"
+      },
+      {
+        "seat_no": "m3",
+        "seat_id": "3",
+        "booking_id": "BKG000466",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m4",
+        "seat_id": "4",
+        "booking_id": "BKG000467",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m5",
+        "seat_id": "5",
+        "booking_id": "BKG000468",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m100",
+        "seat_id": "100",
+        "booking_id": "BKG000473",
+        "uname": "Akash R",
+        "phone": "9448423669",
+        "status": "available"
+      },
+      {
+        "seat_no": "m104",
+        "seat_id": "104",
+        "booking_id": "BKG000474",
+        "uname": "Akash R",
+        "phone": "9448423669",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m105",
+        "seat_id": "105",
+        "booking_id": "BKG000475",
+        "uname": "Ananth",
+        "phone": "8757457434",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m106",
+        "seat_id": "106",
+        "booking_id": "BKG000476",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m107",
+        "seat_id": "107",
+        "booking_id": "BKG000477",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m108",
+        "seat_id": "108",
+        "booking_id": "BKG000478",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m109",
+        "seat_id": "109",
+        "booking_id": "BKG000479",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m110",
+        "seat_id": "110",
+        "booking_id": "BKG000480",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m111",
+        "seat_id": "111",
+        "booking_id": "BKG000482",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m7",
+        "seat_id": "7",
+        "booking_id": "BKG000488",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m91",
+        "seat_id": "91",
+        "booking_id": "BKG000489",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m76",
+        "seat_id": "76",
+        "booking_id": "BKG000490",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m47",
+        "seat_id": "47",
+        "booking_id": "BKG000492",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m70",
+        "seat_id": "70",
+        "booking_id": "BKG000493",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m80",
+        "seat_id": "80",
+        "booking_id": "BKG000494",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m87",
+        "seat_id": "87",
+        "booking_id": "BKG000495",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m53",
+        "seat_id": "53",
+        "booking_id": "BKG000496",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m30",
+        "seat_id": "30",
+        "booking_id": "BKG000497",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m51",
+        "seat_id": "51",
+        "booking_id": "BKG000498",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m62",
+        "seat_id": "62",
+        "booking_id": "BKG000499",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m50",
+        "seat_id": "50",
+        "booking_id": "BKG000500",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m113",
+        "seat_id": "113",
+        "booking_id": "BKG000504",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m83",
+        "seat_id": "83",
+        "booking_id": "BKG000505",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m90",
+        "seat_id": "90",
+        "booking_id": "BKG000506",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m27",
+        "seat_id": "27",
+        "booking_id": "BKG000509",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m101",
+        "seat_id": "101",
+        "booking_id": "BKG000511",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m63",
+        "seat_id": "63",
+        "booking_id": "BKG000515",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "available"
+      },
+      {
+        "seat_no": "m102",
+        "seat_id": "102",
+        "booking_id": "BKG000516",
+        "uname": "dd",
+        "phone": "9999999998",
+        "status": "available"
+      },
+      {
+        "seat_no": "m98",
+        "seat_id": "98",
+        "booking_id": "BKG000517",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m100",
+        "seat_id": "100",
+        "booking_id": "BKG000519",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m101",
+        "seat_id": "101",
+        "booking_id": "BKG000522",
+        "uname": "Arijit Saha",
+        "phone": "6638855529",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m74",
+        "seat_id": "74",
+        "booking_id": "BKG000524",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m85",
+        "seat_id": "85",
+        "booking_id": "BKG000525",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m71",
+        "seat_id": "71",
+        "booking_id": "BKG000526",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m73",
+        "seat_id": "73",
+        "booking_id": "BKG000527",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m65",
+        "seat_id": "65",
+        "booking_id": "BKG000528",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m118",
+        "seat_id": "118",
+        "booking_id": "BKG000529",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m63",
+        "seat_id": "63",
+        "booking_id": "BKG000530",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m66",
+        "seat_id": "66",
+        "booking_id": "BKG000531",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m25",
+        "seat_id": "25",
+        "booking_id": "BKG000533",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m117",
+        "seat_id": "117",
+        "booking_id": "BKG000534",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "available"
+      },
+      {
+        "seat_no": "m17",
+        "seat_id": "17",
+        "booking_id": "BKG000535",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m120",
+        "seat_id": "120",
+        "booking_id": "BKG000536",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m79",
+        "seat_id": "79",
+        "booking_id": "BKG000538",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m43",
+        "seat_id": "43",
+        "booking_id": "BKG000541",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m49",
+        "seat_id": "49",
+        "booking_id": "BKG000543",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m99",
+        "seat_id": "99",
+        "booking_id": "BKG000546",
+        "uname": "Ananth",
+        "phone": "8971141959",
+        "status": "available"
+      },
+      {
+        "seat_no": "m102",
+        "seat_id": "102",
+        "booking_id": "BKG000547",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "available"
+      },
+      {
+        "seat_no": "m45",
+        "seat_id": "45",
+        "booking_id": "BKG000548",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m46",
+        "seat_id": "46",
+        "booking_id": "BKG000549",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m114",
+        "seat_id": "114",
+        "booking_id": "BKG000550",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m116",
+        "seat_id": "116",
+        "booking_id": "BKG000551",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m89",
+        "seat_id": "89",
+        "booking_id": "BKG000552",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m48",
+        "seat_id": "48",
+        "booking_id": "BKG000553",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m41",
+        "seat_id": "41",
+        "booking_id": "BKG000554",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m77",
+        "seat_id": "77",
+        "booking_id": "BKG000555",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m36",
+        "seat_id": "36",
+        "booking_id": "BKG000556",
+        "uname": "Rohith Badri",
+        "phone": "9922222222",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m64",
+        "seat_id": "64",
+        "booking_id": "BKG000557",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m72",
+        "seat_id": "72",
+        "booking_id": "BKG000558",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m38",
+        "seat_id": "38",
+        "booking_id": "BKG000559",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m59",
+        "seat_id": "59",
+        "booking_id": "BKG000560",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m39",
+        "seat_id": "39",
+        "booking_id": "BKG000561",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m78",
+        "seat_id": "78",
+        "booking_id": "BKG000562",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m52",
+        "seat_id": "52",
+        "booking_id": "BKG000563",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m24",
+        "seat_id": "24",
+        "booking_id": "BKG000564",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m6",
+        "seat_id": "6",
+        "booking_id": "BKG000565",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m16",
+        "seat_id": "16",
+        "booking_id": "BKG000566",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m19",
+        "seat_id": "19",
+        "booking_id": "BKG000567",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m9",
+        "seat_id": "9",
+        "booking_id": "BKG000568",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m95",
+        "seat_id": "95",
+        "booking_id": "BKG000569",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m10",
+        "seat_id": "10",
+        "booking_id": "BKG000570",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m52",
+        "seat_id": "52",
+        "booking_id": "BKG000571",
+        "uname": "Rohith",
+        "phone": "9999911111",
+        "status": "available"
+      },
+      {
+        "seat_no": "m51",
+        "seat_id": "51",
+        "booking_id": "BKG000572",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m66",
+        "seat_id": "66",
+        "booking_id": "BKG000573",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m66",
+        "seat_id": "66",
+        "booking_id": "BKG000574",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m41",
+        "seat_id": "41",
+        "booking_id": "BKG000575",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m85",
+        "seat_id": "85",
+        "booking_id": "BKG000576",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m85",
+        "seat_id": "85",
+        "booking_id": "BKG000577",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m85",
+        "seat_id": "85",
+        "booking_id": "BKG000578",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m23",
+        "seat_id": "23",
+        "booking_id": "BKG000579",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "soon"
+      },
+      {
+        "seat_no": "m11",
+        "seat_id": "11",
+        "booking_id": "BKG000580",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "soon"
+      },
+      {
+        "seat_no": "m57",
+        "seat_id": "57",
+        "booking_id": "BKG000581",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "soon"
+      },
+      {
+        "seat_no": "m28",
+        "seat_id": "28",
+        "booking_id": "BKG000582",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m8",
+        "seat_id": "8",
+        "booking_id": "BKG000583",
+        "uname": "Dheeraj Pal",
+        "phone": "6789555646",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m94",
+        "seat_id": "94",
+        "booking_id": "BKG000584",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m69",
+        "seat_id": "69",
+        "booking_id": "BKG000585",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m12",
+        "seat_id": "12",
+        "booking_id": "BKG000586",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m13",
+        "seat_id": "13",
+        "booking_id": "BKG000587",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      },
+      {
+        "seat_no": "m18",
+        "seat_id": "18",
+        "booking_id": "BKG000588",
+        "uname": "Testh",
+        "phone": "9876543210",
+        "status": "booked"
+      }
+    ]
+    if (seatsData) {
+      processSeatsData(seatsData)
+    }
+
+    let selectedSeat = null
+    let isSeatSelected = false
+    function processSeatsData(seatsData) {
+      seatsData.forEach((seat) => {
+        const seatDiv = document.getElementById(seat.seat_id)
+        seatDiv.onclick = () => {
+          window.location.href = 'https://cabinmate.agilecloud.biz/Run/aspx/tstruct.aspx?transid=bkngs'
+        }
+        setupSeat(seatDiv, seat)
+        seatDiv.addEventListener('click', function () {
+          handleSeatSelection(seatDiv, seat)
+        })
+      })
+    }
+
+    function hideSeat(seatDiv) {
+      seatDiv.style.backgroundColor = '#eeeeee'
+      seatDiv.style.color = 'white'
+      seatDiv.style.border = 'none'
+      seatDiv.style.textContent = ''
+    }
+
+    function setupSeat(seatDiv, seat) {
+      seatDiv.classList.add('seat', seat.status)
+      seatDiv.style.cursor = seat.status === 'available' ? 'pointer' : 'default';
+
+      // Clear existing content
+      seatDiv.innerHTML = '';
+
+      // Create tooltip container
+      const tooltipContainer = document.createElement('div');
+      tooltipContainer.className = 'tooltip-container';
+      tooltipContainer.textContent = seat.seat_id;
+
+      if (seat.status === 'booked' || seat.status === 'soon' || seat.status === 'expering') {
+        // Create tooltip text
+        const tooltipText = document.createElement('div');
+        tooltipText.className = 'tooltip-text';
+        tooltipText.innerHTML = `${seat.uname}<br>Booking Id: ${seat.booking_id}`;
+        tooltipContainer.appendChild(tooltipText);
+      }
+
+      seatDiv.appendChild(tooltipContainer);
+    }
+
+    function handleSeatSelection(seatDiv, seat) {
+      if (seat.status === 'available') {
+        if (selectedSeat) {
+          selectedSeat.classList.remove('selected')
+        }
+        if (selectedSeat !== seatDiv) {
+          seatDiv.classList.add('selected')
+          selectedSeat = seatDiv
+          isSeatSelected = true
+        } else {
+          selectedSeat = null
+          isSeatSelected = false
+        }
+      }
+    }
+  </script>
+
+
+
+</body>
+
+</html>
