@@ -1,13 +1,72 @@
+// Inject tooltip CSS styles
+const tooltipStyle = document.createElement('style')
+tooltipStyle.textContent = `
+  .seat-tooltip {
+    position: relative;
+  }
+  .seat-tooltip .tooltip-content {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    line-height: 1.5;
+    pointer-events: none;
+  }
+  /* Force horizontal text for tooltips inside vertical seats */
+  .verticalSeat .tooltip-content {
+    writing-mode: horizontal-tb;
+  }
+  .seat-tooltip .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+  }
+  .seat-tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+  }
+`
+document.head.appendChild(tooltipStyle)
+
 const franchiseName = parent.GetFieldValue('frn_name000F1')
 const bookingStartDate = parent.GetFieldValue('booking_start_date000F1')
 const bookingDuration = parent.GetFieldValue('booking_duration000F1')
 const durationValue = parent.GetFieldValue('duration_value000F1')
 const cabinType = parent.GetFieldValue('cabin_type000F1')
 const id = parent.GetFieldValue('user_id000F1')
+const startTime = parent.GetFieldValue('start_time000F1')
+const endTime = parent.GetFieldValue('end_time000F1')
+const type = cabinType === "Conference Room" ? "conference_room" : cabinType === "Office Cabin" ? "office_cabin" : "reading_space"
 console.log('id: ', id);
 let seatField = parent.GetFieldId
   ? parent.GetFieldId('seat_no', '000', '1')
   : null
+
+console.log({
+  s_date: bookingStartDate,
+  b_duration: bookingDuration,
+  d_value: durationValue,
+  franchise_id: franchiseName,
+  userid: id,
+  type,
+  s_time: startTime || '00:00 PM',
+  e_time: endTime || '00:00 PM'
+})
 
 let seatsData
 const result = AxCallSqlDataAPI('AXPKEY000000010034', {
@@ -16,6 +75,9 @@ const result = AxCallSqlDataAPI('AXPKEY000000010034', {
   d_value: durationValue,
   franchise_id: franchiseName,
   userid: id,
+  type,
+  s_time: startTime || '00:00 PM',
+  e_time: endTime || '00:00 PM'
 })
 
 const response = JSON.parse(result)
@@ -53,6 +115,20 @@ function setupSeat(seatDiv, seat) {
   seatDiv.style.cursor =
     seat.availability_status === 'available' ? 'pointer' : 'default'
   seatDiv.textContent = seat.cabin_name
+
+  // Add tooltip if both seats and description are not empty strings
+  if (
+    seat.seats &&
+    seat.seats !== '' &&
+    seat.description &&
+    seat.description !== ''
+  ) {
+    seatDiv.classList.add('seat-tooltip')
+    const tooltipContent = document.createElement('div')
+    tooltipContent.className = 'tooltip-content'
+    tooltipContent.innerHTML = `No. of Seats: ${seat.seats}<br>Description: ${seat.description}`
+    seatDiv.appendChild(tooltipContent)
+  }
 }
 
 function handleSeatSelection(seatDiv, seat) {
@@ -77,6 +153,3 @@ function handleSeatSelection(seatDiv, seat) {
     }
   }
 }
-
-
-// <script type="text/javascript" src="../../cabinmate/HTMLPages/js/layout.js?v=1730965694092"></script>
