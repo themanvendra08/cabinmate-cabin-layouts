@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kundalahalli Cabin Layout</title>
+    <link rel="stylesheet"
+        href="https://cabinmate-axpert-api.s3.ap-south-1.amazonaws.com/html-files/CSS/layout.css">
+</head>
+
+<body>
+    <!-- <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div> -->
+    <div style="position: relative; margin: 40px; width: 1500px; height: 750px;">
+
+        <!-- ==================== LEFT INDOOR SECTION ==================== -->
+        <div style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 44rem;
+            height: 44rem;
+            border: 0.8rem solid #e0e0e0;
+            box-sizing: border-box;
+        ">
+
+            <!-- ===== Striped window element (top-left) ===== -->
+            <div style="
+                position: absolute;
+                left: 0.3rem;
+                top: 0.3rem;
+                width: 5rem;
+                height: 1.8rem;
+                background: repeating-linear-gradient(90deg, #d0d0d0 0px, #d0d0d0 3px, #f5f5f5 3px, #f5f5f5 6px);
+                border: 1px solid #c0c0c0;
+            "></div>
+
+            <!-- ===== STUDY HALLS UPPER (top-left corner) ===== -->
+            <div style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 14rem;
+                height: 9rem;
+                border-right: 0.5rem solid #e0e0e0;
+                border-bottom: 0.5rem solid #e0e0e0;
+            ">
+                <p style="font-size: 9px; font-weight: bold; position: absolute; left: 0.3rem; top: 0.3rem;">
+                    Washroom</p>
+                <div style="display: flex; gap: 0.3rem; position: absolute; left: 6rem; top: 0.5rem;">
+                    <div class="horizontalSeat Non-AC" id="29">29</div>
+                    <div class="horizontalSeat Non-AC" id="30">30</div>
+                </div>
+                <p style="font-size: 10px; font-weight: bold; color: red; position: absolute; left: 3.5rem; top: 4.5rem;">
+                    Study<br>Halls</p>
+                <div style="position: absolute; left: 10.5rem; top: 2.5rem;">
+                    <div class="horizontalSeat Non-AC" id="26">26</div>
+                </div>
+                <div style="display: flex; gap: 0.3rem; position: absolute; left: 7.5rem; top: 5rem;">
+                    <div class="horizontalSeat Non-AC" id="28">28</div>
+                    <div class="horizontalSeat Non-AC" id="27">27</div>
+                </div>
+            </div>
+
+            <!-- ===== WASHROOM (left-center, green) ===== -->
+            <div style="
+                position: absolute;
+                left: 0;
+                top: 9.5rem;
+                width: 7.5rem;
+                height: 9rem;
+                border-right: 0.5rem solid #e0e0e0;
+                border-bottom: 0.5rem solid #e0e0e0;
+                background-color: #90EE90;
+            ">
+                <p style="font-size: 11px; font-weight: bold; position: absolute; left: 0.8rem; top: 3.5rem;">
+                    Washroom</p>
+            </div>
+
+            <!-- ===== STUDY HALLS LOWER (bottom-left) ===== -->
+            <div style="
+                position: absolute;
+                left: 0;
+                top: 19.5rem;
+                width: 14rem;
+                height: 23.5rem;
+                border-right: 0.5rem solid #e0e0e0;
+                border-top: 0.5rem solid #e0e0e0;
+            ">
+                <div style="display: flex; flex-direction: column; gap: 0.3rem; position: absolute; left: 0.5rem; top: 2rem;">
+                    <div class="horizontalSeat Non-AC" id="45">45</div>
+                    <div class="horizontalSeat Non-AC" id="44">44</div>
+                    <div class="horizontalSeat Non-AC" id="43">43</div>
+                    <div class="horizontalSeat Non-AC" id="42">42</div>
+                    <div class="horizontalSeat Non-AC" id="41">41</div>
+                </div>
+                <p style="font-size: 10px; font-weight: bold; color: red; position: absolute; left: 5rem; top: 5rem;">
+                    Study<br>Halls</p>
+                <div style="display: flex; flex-direction: column; gap: 0.3rem; position: absolute; right: 1.5rem; top: 2rem;">
+                    <div class="horizontalSeat Non-AC" id="31">31</div>
+                    <div class="horizontalSeat Non-AC" id="32">32</div>
+                    <div class="horizontalSeat Non-AC" id="33">33</div>
+                    <div class="horizontalSeat Non-AC" id="34">34</div>
+                    <div class="horizontalSeat Non-AC" id="35">35</div>
+                </div>
+                <div style="display: flex; gap: 0.3rem; position: absolute; left: 0.5rem; bottom: 0.5rem;">
+                    <div class="verticalSeat Non-AC" id="40">40</div>
+                    <div class="verticalSeat Non-AC" id="39">39</div>
+                    <div class="verticalSeat Non-AC" id="38">38</div>
+                    <div class="verticalSeat Non-AC" id="37">37</div>
+                    <div class="verticalSeat Non-AC" id="36">36</div>
+                </div>
+            </div>
+
+            <!-- ===== TOP CORRIDOR ===== -->
+            <div style="
+                position: absolute;
+                left: 14.5rem;
+                top: 0;
+                width: 28rem;
+                height: 7rem;
+                border-bottom: 0.5rem solid #e0e0e0;
+            ">
+                <!-- Ceiling fan icons -->
+                <div style="position: absolute; left: 12rem; top: 2.5rem; width: 1.5rem; height: 1.5rem; border: 2px solid #999; border-radius: 50%;"></div>
+                <div style="position: absolute; left: 20rem; top: 2.5rem; width: 1.5rem; height: 1.5rem; border: 2px solid #999; border-radius: 50%;"></div>
+                <!-- Curved wall arc -->
+                <div style="
+                    position: absolute;
+                    right: -0.5rem;
+                    bottom: -0.5rem;
+                    width: 4rem;
+                    height: 4rem;
+                    border-left: 0.3rem solid #e0e0e0;
+                    border-radius: 0 0 0 100%;
+                "></div>
+            </div>
+
+            <!-- Green exit sign -->
+            <div style="position: absolute; left: 42rem; top: 6.8rem; width: 1.5rem; height: 0.8rem; background-color: #4CAF50; border-radius: 2px;"></div>
+
+            <!-- ===== OFFICE CABIN -4 ===== -->
+            <div style="
+                position: absolute;
+                left: 14.5rem;
+                top: 7.5rem;
+                width: 11rem;
+                height: 5rem;
+                border-right: 0.5rem solid #e0e0e0;
+                border-bottom: 0.5rem solid #e0e0e0;
+            ">
+                <p style="font-size: 9px; font-weight: bold; position: absolute; left: 1rem; bottom: 0.5rem;">
+                    Office Cabin -4</p>
+            </div>
+
+            <!-- ===== OFFICE CABIN -3 ===== -->
+            <div style="
+                position: absolute;
+                left: 14.5rem;
+                top: 13rem;
+                width: 4.5rem;
+                height: 6.5rem;
+                border-right: 0.5rem solid #e0e0e0;
+                border-bottom: 0.5rem solid #e0e0e0;
+            ">
+                <p style="font-size: 8px; font-weight: bold; position: absolute; left: 0.5rem; top: 0.8rem; writing-mode: vertical-rl;">Office Cabin -3</p>
+            </div>
+
+            <!-- ===== OFFICE CABIN -2 ===== -->
+            <div style="
+                position: absolute;
+                left: 14.5rem;
+                top: 19.5rem;
+                width: 4.5rem;
+                height: 6.5rem;
+                border-right: 0.5rem solid #e0e0e0;
+                border-bottom: 0.5rem solid #e0e0e0;
+            ">
+                <p style="font-size: 8px; font-weight: bold; position: absolute; left: 0.5rem; top: 0.8rem; writing-mode: vertical-rl;">Office Cabin -2</p>
+            </div>
+
+            <!-- ===== OFFICE CABIN -1 ===== -->
+            <div style="
+                position: absolute;
+                left: 14.5rem;
+                top: 26rem;
+                width: 4.5rem;
+                height: 6.5rem;
+                border-right: 0.5rem solid #e0e0e0;
+                border-bottom: 0.5rem solid #e0e0e0;
+            ">
+                <p style="font-size: 8px; font-weight: bold; position: absolute; left: 0.5rem; top: 0.8rem; writing-mode: vertical-rl;">Office Cabin -1</p>
+            </div>
+
+            <!-- ===== LIFT (L, I, F, T boxes) ===== -->
+            <div style="display: flex; gap: 0.3rem; position: absolute; left: 26rem; top: 8rem;">
+                <div style="width: 2.5rem; height: 1.5rem; border: 1px solid #999; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">L</div>
+                <div style="width: 2.5rem; height: 1.5rem; border: 1px solid #999; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">I</div>
+                <div style="width: 2.5rem; height: 1.5rem; border: 1px solid #999; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">F</div>
+                <div style="width: 2.5rem; height: 1.5rem; border: 1px solid #999; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold;">T</div>
+            </div>
+
+            <!-- ===== WORKSTATION GRID (5 rows x 4 cols) ===== -->
+            <div style="display: flex; gap: 0.3rem; position: absolute; left: 26rem; top: 10.5rem;">
+                <div class="horizontalSeat AC" id="21">21</div>
+                <div class="horizontalSeat AC" id="20">20</div>
+                <div style="width: 1.5rem;"></div>
+                <div class="horizontalSeat AC" id="11">11</div>
+                <div class="horizontalSeat AC" id="10">10</div>
+            </div>
+            <div style="display: flex; gap: 0.3rem; position: absolute; left: 26rem; top: 12.3rem;">
+                <div class="horizontalSeat AC" id="22">22</div>
+                <div class="horizontalSeat AC" id="19">19</div>
+                <div style="width: 1.5rem;"></div>
+                <div class="horizontalSeat AC" id="12">12</div>
+                <div class="horizontalSeat AC" id="9">9</div>
+            </div>
+            <div style="display: flex; gap: 0.3rem; position: absolute; left: 26rem; top: 14.1rem;">
+                <div class="horizontalSeat AC" id="23">23</div>
+                <div class="horizontalSeat AC" id="18">18</div>
+                <div style="width: 1.5rem;"></div>
+                <div class="horizontalSeat AC" id="13">13</div>
+                <div class="horizontalSeat AC" id="8">8</div>
+            </div>
+            <div style="display: flex; gap: 0.3rem; position: absolute; left: 26rem; top: 15.9rem;">
+                <div class="horizontalSeat AC" id="24">24</div>
+                <div class="horizontalSeat AC" id="17">17</div>
+                <div style="width: 1.5rem;"></div>
+                <div class="horizontalSeat AC" id="14">14</div>
+                <div class="horizontalSeat AC" id="7">7</div>
+            </div>
+            <div style="display: flex; gap: 0.3rem; position: absolute; left: 26rem; top: 17.7rem;">
+                <div class="horizontalSeat AC" id="25">25</div>
+                <div class="horizontalSeat AC" id="16">16</div>
+                <div style="width: 1.5rem;"></div>
+                <div class="horizontalSeat AC" id="15">15</div>
+                <div class="horizontalSeat AC" id="6">6</div>
+            </div>
+
+            <p style="font-size: 11px; font-weight: bold; color: #888; position: absolute; left: 26rem; top: 20.5rem;">
+                Workstations</p>
+
+            <!-- ===== WORKSTATION SINGLES ===== -->
+            <div style="position: absolute; left: 37.5rem; top: 21rem;">
+                <div class="horizontalSeat AC" id="1">1</div>
+            </div>
+            <div style="position: absolute; left: 37.5rem; top: 22.8rem;">
+                <div class="horizontalSeat AC" id="2">2</div>
+            </div>
+            <div style="position: absolute; left: 37.5rem; top: 24.6rem;">
+                <div class="horizontalSeat AC" id="3">3</div>
+            </div>
+            <div style="display: flex; gap: 0.3rem; position: absolute; left: 35.5rem; top: 27.5rem;">
+                <div class="horizontalSeat AC" id="5">5</div>
+                <div class="horizontalSeat AC" id="4">4</div>
+            </div>
+
+            <!-- ===== OFFICE CABIN -5 ===== -->
+            <div style="
+                position: absolute;
+                left: 24rem;
+                top: 33rem;
+                width: 13rem;
+                height: 7rem;
+                border: 0.5rem solid #e0e0e0;
+            ">
+                <p style="font-size: 10px; font-weight: bold; position: absolute; left: 2rem; top: 2.5rem;">
+                    Office Cabin -5</p>
+            </div>
+
+            <!-- Furniture to right of Office Cabin -5 -->
+            <div style="position: absolute; left: 38rem; top: 33.5rem; width: 3rem; height: 5rem; border: 1px solid #c0c0c0; background-color: #f0f0f0;"></div>
+            <div style="position: absolute; left: 38rem; top: 39rem; width: 3rem; height: 2.5rem; border: 1px solid #c0c0c0; background-color: #dde8f0;"></div>
+
+            <!-- Staircase bars -->
+            <div style="display: flex; gap: 2px; position: absolute; left: 34rem; bottom: 2rem;">
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+                <div style="width: 2px; height: 1rem; background-color: #999;"></div>
+            </div>
+
+            <!-- ===== ENTRANCE ===== -->
+            <div style="
+                position: absolute;
+                left: 30rem;
+                bottom: 0.2rem;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                border: 0.3rem solid #b0d4c8;
+                background: radial-gradient(circle, #b0d4c8 30%, transparent 70%);
+            "></div>
+            <!-- Entrance door arc -->
+            <div style="
+                position: absolute;
+                left: 36rem;
+                bottom: 0;
+                width: 6rem;
+                height: 3rem;
+                border-top: 2px solid #c0c0c0;
+                border-radius: 50% 50% 0 0;
+            "></div>
+            <p style="font-size: 8px; font-weight: bold; letter-spacing: 2px; position: absolute; left: 37rem; bottom: 0.5rem;">
+                ENTRANCE</p>
+        </div>
+
+        <!-- ==================== RIGHT OPEN SECTION ==================== -->
+        <div style="
+            position: absolute;
+            left: 44rem;
+            top: 0;
+            width: 48rem;
+            height: 44rem;
+            border: 0.8rem solid #e0e0e0;
+            box-sizing: border-box;
+            background-color: #FFFDE7;
+        ">
+            <!-- Green plant clusters (top-left) -->
+            <div style="position: absolute; left: 4rem; top: 0.8rem; display: flex; gap: 0.2rem;">
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: radial-gradient(circle, #66BB6A, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: radial-gradient(circle, #66BB6A, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: 50%; background: radial-gradient(circle, #66BB6A, #388E3C); opacity: 0.8;"></div>
+            </div>
+            <!-- Red dot -->
+            <div style="position: absolute; left: 5.5rem; top: 0.5rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background-color: #c0392b;"></div>
+
+            <!-- Meeting table 1 (top) -->
+            <div style="position: absolute; left: 4rem; top: 5.5rem;">
+                <div style="position: absolute; left: -2rem; top: 1.5rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 2px solid #666;"></div>
+                <div style="position: relative; width: 7rem; height: 5rem;">
+                    <div style="width: 7rem; height: 5rem; background-color: #5d9e8f; border-radius: 0.5rem; opacity: 0.5;"></div>
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.6;"></div>
+                </div>
+                <div style="position: absolute; right: -2rem; top: 1.5rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 2px solid #666;"></div>
+            </div>
+
+            <!-- Meeting table 2 (middle) -->
+            <div style="position: absolute; left: 4rem; top: 13rem;">
+                <div style="position: absolute; left: -2rem; top: 1.5rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 2px solid #666;"></div>
+                <div style="position: relative; width: 7rem; height: 5rem;">
+                    <div style="width: 7rem; height: 5rem; background-color: #5d9e8f; border-radius: 0.5rem; opacity: 0.5;"></div>
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.6;"></div>
+                </div>
+                <div style="position: absolute; right: -2rem; top: 1.5rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 2px solid #666;"></div>
+            </div>
+
+            <!-- Meeting table 3 (lower) -->
+            <div style="position: absolute; left: 6rem; top: 20rem;">
+                <div style="position: absolute; left: -2rem; top: 1rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 2px solid #666;"></div>
+                <div style="position: relative; width: 6rem; height: 4.5rem;">
+                    <div style="width: 6rem; height: 4.5rem; background-color: #5d9e8f; border-radius: 0.5rem; opacity: 0.5;"></div>
+                    <div style="width: 3rem; height: 3rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.6;"></div>
+                </div>
+                <div style="position: absolute; right: -2rem; top: 1rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; border: 2px solid #666;"></div>
+            </div>
+
+            <!-- DISCUSSION AREA (vertical text) -->
+            <div style="position: absolute; left: 14rem; top: 5rem; border: 0.3rem solid #e0e0e0; padding: 0.5rem 0.3rem;">
+                <p style="font-size: 10px; font-weight: bold; writing-mode: vertical-rl; letter-spacing: 1px;">DISCUSSION AREA</p>
+            </div>
+
+            <!-- WALKING WAY text and arrows -->
+            <p style="font-size: 13px; font-weight: bold; position: absolute; left: 20rem; top: 5rem;">
+                &larr; &nbsp; WALKING WAY &nbsp; &larr;</p>
+
+            <!-- Walking person icon -->
+            <div style="position: absolute; left: 27rem; top: 7rem;">
+                <div style="width: 1rem; height: 1rem; border-radius: 50%; background-color: #333; margin: 0 auto;"></div>
+                <div style="width: 0.3rem; height: 1.5rem; background-color: #333; margin: 0.1rem auto 0;"></div>
+            </div>
+
+            <!-- Tree/bush border - top row -->
+            <div style="display: flex; gap: 0.5rem; position: absolute; top: 0.3rem; right: 0.3rem;">
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 3.2rem; height: 3.2rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+            </div>
+
+            <!-- Tree/bush border - right column -->
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; position: absolute; top: 3.5rem; right: 0.3rem;">
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 2.8rem; height: 2.8rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #81C784, #388E3C); opacity: 0.8;"></div>
+            </div>
+
+            <!-- Horizontal divider line -->
+            <div style="position: absolute; right: 2rem; top: 25rem; width: 28rem; height: 0.2rem; background-color: #999;"></div>
+
+            <!-- DISCUSSION AREA (horizontal, bottom-right) -->
+            <div style="position: absolute; right: 8rem; top: 26.5rem; border: 0.3rem solid #e0e0e0; padding: 0.3rem 0.8rem;">
+                <p style="font-size: 10px; font-weight: bold;">DISCUSSION AREA</p>
+            </div>
+
+            <!-- Bottom discussion tables (5 vertical tables with circles) -->
+            <div style="display: flex; gap: 2.5rem; position: absolute; left: 10rem; top: 29rem;">
+                <!-- Table 1 -->
+                <div style="position: relative;">
+                    <div style="width: 3.5rem; height: 7rem; background-color: #4a8a7a; border-radius: 0.3rem; opacity: 0.5;"></div>
+                    <div style="width: 3rem; height: 3rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); opacity: 0.6;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                </div>
+                <!-- Table 2 -->
+                <div style="position: relative;">
+                    <div style="width: 3.5rem; height: 7rem; background-color: #4a8a7a; border-radius: 0.3rem; opacity: 0.5;"></div>
+                    <div style="width: 3rem; height: 3rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); opacity: 0.6;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                </div>
+                <!-- Table 3 -->
+                <div style="position: relative;">
+                    <div style="width: 3.5rem; height: 7rem; background-color: #4a8a7a; border-radius: 0.3rem; opacity: 0.5;"></div>
+                    <div style="width: 3rem; height: 3rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); opacity: 0.6;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                </div>
+                <!-- Table 4 -->
+                <div style="position: relative;">
+                    <div style="width: 3.5rem; height: 7rem; background-color: #4a8a7a; border-radius: 0.3rem; opacity: 0.5;"></div>
+                    <div style="width: 3rem; height: 3rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); opacity: 0.6;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                </div>
+                <!-- Table 5 -->
+                <div style="position: relative;">
+                    <div style="width: 3.5rem; height: 7rem; background-color: #4a8a7a; border-radius: 0.3rem; opacity: 0.5;"></div>
+                    <div style="width: 3rem; height: 3rem; border-radius: 50%; background-color: #7abfb0; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); opacity: 0.6;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 2rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; left: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                    <div style="position: absolute; right: -1.5rem; top: 4.5rem; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #666;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cabinmate-axpert-api.s3.ap-south-1.amazonaws.com/html-files/JS/layout.js"></script>
+</body>
+
+</html>
