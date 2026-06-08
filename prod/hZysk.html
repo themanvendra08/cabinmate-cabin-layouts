@@ -8,12 +8,192 @@
 </head>
 
 <body>
-  <div id="loadingOverlay" class="loading-overlay">
-    <div class="loading-spinner"></div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    .zysk-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1565c0 100%);
+      box-shadow: 0 4px 20px rgba(21, 101, 192, 0.35);
+    }
+
+    .zysk-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
+      gap: 10px;
+    }
+
+    .zysk-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .zysk-logo-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #42a5f5, #1565c0);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      box-shadow: 0 2px 8px rgba(66,165,245,0.4);
+      flex-shrink: 0;
+    }
+
+    .zysk-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .zysk-brand-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.2px;
+    }
+
+    .zysk-brand-sub {
+      font-size: 10px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .zysk-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .zysk-hours-chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 30px;
+      padding: 5px 11px;
+      backdrop-filter: blur(8px);
+    }
+
+    .zysk-pulse {
+      width: 7px;
+      height: 7px;
+      background: #4caf50;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(76,175,80,0.7);
+      animation: zysk-pulse 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes zysk-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(76,175,80,0.7); }
+      70%  { box-shadow: 0 0 0 6px rgba(76,175,80,0); }
+      100% { box-shadow: 0 0 0 0 rgba(76,175,80,0); }
+    }
+
+    .zysk-hours-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+    }
+
+    .zysk-call-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #42a5f5, #1976d2);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 13px;
+      border-radius: 30px;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+      box-shadow: 0 3px 12px rgba(66,165,245,0.45);
+      transition: transform 0.15s, box-shadow 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .zysk-call-btn:active {
+      transform: scale(0.96);
+      box-shadow: 0 1px 6px rgba(66,165,245,0.3);
+    }
+
+    .zysk-call-icon {
+      width: 18px;
+      height: 18px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .zysk-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(66,165,245,0.5), rgba(255,255,255,0.15), transparent);
+    }
+
+    @media (max-width: 400px) {
+      .zysk-brand-sub { display: none; }
+      .zysk-hours-text { font-size: 11px; }
+      .zysk-call-btn { font-size: 11px; padding: 5px 10px; }
+    }
+  </style>
+
+  <div class="zysk-header">
+    <div class="zysk-header-inner">
+      <div class="zysk-brand">
+        <div class="zysk-logo-mark">Z</div>
+        <div class="zysk-brand-text">
+          <span class="zysk-brand-name">Zysk Cowork</span>
+          <span class="zysk-brand-sub">Floor Plan</span>
+        </div>
+      </div>
+
+      <div class="zysk-meta">
+        <div class="zysk-hours-chip">
+          <div class="zysk-pulse"></div>
+          <span class="zysk-hours-text">9 AM – 9 PM</span>
+        </div>
+        <a href="tel:9449192487" class="zysk-call-btn">
+          <div class="zysk-call-icon">📞</div>
+          +91 94491 92487
+        </a>
+      </div>
+    </div>
+    <div class="zysk-divider"></div>
   </div>
+
+  <!-- <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div> -->
   <div style="width:1000px;display: flex;
     justify-content: center;
-    align-items: center;">
+    align-items: center;
+    margin-top: 68px;">
     <!-- seating -->
     <div style="position:relative; width:1250px; height:1200px; margin: auto">
 
