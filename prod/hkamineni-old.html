@@ -11,9 +11,10 @@
   </head>
 
   <body>
-    <div id="loadingOverlay" class="loading-overlay">
-      <div class="loading-spinner"></div>
-    </div>
+      <!-- <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+      </div> -->
+
     <div style="position: relative; margin: 40px; width: 1250px; height: 900px">
       <!--left top layout  -->
       <div style="position: absolute; right: 23rem; bottom: 63.5rem">
@@ -516,6 +517,47 @@
               <div class="horizontalSeat Non-AC" id="174">174</div>
               <div class="horizontalSeat Non-AC" id="175">175</div>
             </div>
+
+            <!-- Women Only label -->
+            <div style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              pointer-events: none;
+              z-index: 2;
+            ">
+              <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                background: linear-gradient(160deg, #fff0f8 0%, #fce7f3 100%);
+                border: 1.5px solid #f9a8d4;
+                border-radius: 20px;
+                padding: 8px 5px;
+                box-shadow: 0 2px 10px rgba(219,39,119,0.18), inset 0 1px 0 rgba(255,255,255,0.8);
+                width: 2rem;
+              ">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="8" r="5.5" stroke="#db2777" stroke-width="2"/>
+                  <path d="M12 13.5v7M9.5 18h5" stroke="#db2777" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span style="
+                  font-size: 9px;
+                  font-weight: 800;
+                  color: #9d174d;
+                  writing-mode: vertical-rl;
+                  transform: rotate(180deg);
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                  white-space: nowrap;
+                  font-family: 'Inter', sans-serif;
+                  line-height: 1;
+                ">Women Only</span>
+              </div>
+            </div>
+
             <div
               style="
                 display: flex;
@@ -640,6 +682,7 @@
               <div class="horizontalSeat AC" id="77">77</div>
               <div class="horizontalSeat AC" id="76">76</div>
             </div>
+
 
             <!--right-seats-->
             <div
